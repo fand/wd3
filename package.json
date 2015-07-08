@@ -13,7 +13,7 @@
     "mocha": "^2.2.5",
     "promise": "^7.0.3",
     "q": "^1.4.1",
-    "webdriver-manager": "^6.0.0",
+    "webdriver-manager": "fand/webdriver-manager",
     "webdriverio": "^3.0.5"
   }
 }
