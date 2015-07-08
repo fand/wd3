@@ -13,7 +13,7 @@ exports.config = {
     logLevel: 'verbose',
     coloredLogs: true,
     screenshotPath: './errorShots/',
-    baseUrl: 'http://localhost/',
+    baseUrl: 'http://webdriver.io/',
     waitforTimeout: 10000,
     framework: 'mocha',
     reporter: 'dot',

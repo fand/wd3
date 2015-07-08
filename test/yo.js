@@ -11,10 +11,15 @@ describe('top page', function () {
     yield client.init();
   });
 
-  describe('top', function () {
-    it('has correct title', function *() {
-      var title = yield client.url('http://webdriver.io').getTitle();
-      assert(title.match(/WebdriverIO/), 'The title contains "WebdriverIO"');
+  describe('my feature', function() {
+    it('should do something', function *() {
+      yield client
+          .url('https://duckduckgo.com/')
+          .setValue('#search_form_input_homepage', 'WebdriverIO')
+          .click('#search_button_homepage');
+
+      var title = yield browser.getTitle();
+      console.log(title); // outputs: "Title is: WebdriverIO (Software) at DuckDuckGo"
     });
   });
 
