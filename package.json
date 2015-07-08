@@ -1,0 +1,19 @@
+{
+  "name": "wd3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "$(npm bin)/webdriver-manager update --standalone",
+    "test": "$(npm bin)/wdio wdio.conf.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "promise": "^7.0.3",
+    "q": "^1.4.1",
+    "webdriver-manager": "^6.0.0",
+    "webdriverio": "^3.0.0"
+  }
+}
