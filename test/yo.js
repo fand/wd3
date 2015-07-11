@@ -1,19 +1,12 @@
 'use strict';
 
-var webdriverio = require('webdriverio');
-var assert      = require('assert');
+var assert = require('assert');
 
 describe('top page', function () {
-  var client;
-
-  before(function *() {
-    client = webdriverio.remote({ desiredCapabilities: {browserName: 'chrome'} });
-    yield client.init();
-  });
 
   describe('my feature', function() {
     it('should do something', function *() {
-      yield client
+      yield browser
           .url('https://duckduckgo.com/')
           .setValue('#search_form_input_homepage', 'WebdriverIO')
           .click('#search_button_homepage');
@@ -23,7 +16,4 @@ describe('top page', function () {
     });
   });
 
-  after(function () {
-    client.end();
-  });
 });
